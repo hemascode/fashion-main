@@ -14,20 +14,19 @@ class CheckoutPage extends Controller
 {
   public function checkoutpage(Request $request)
   {
-    // Assuming you have the logged-in user's ID
-    $userId = auth()->user()->id;
-    // Assuming you have the total amount of the order passed from the frontend
-    $cartTotal = $request->cartTotal;
-    $amt = $request->amt;
-    $curreny_name = $request->curreny_name;
-    $curreny_icon = $request->curreny_icon;
-    $qty = $request->qty;
-    $pay_method = $request->pay_method;
-    $pay_status = $request->pay_status;
-    $add = $request->add;
-    $shipping_method = $request->shipping_method;
-    $coupon = $request->coupon;
-    $order = $request->order; 
+//     $userId = auth()->user()->id;
+//     $cartTotal = $request->cartTotal;
+//     $amt = $request->amt;
+//     $curreny_name     // Assuming you have the logged-in user's ID
+// = $request->curreny_name;
+//     $curreny_icon = $request->curreny_icon;
+//     $qty = $request->qty;
+//     $pay_method = $request->pay_method;
+//     $pay_status = $request->pay_status;
+//     $add = $request->add;
+//     $shipping_method = $request->shipping_method;
+//     $coupon = $request->coupon;
+//     $order = $request->order; 
        
 
     $setting = GeneralSetting::first();

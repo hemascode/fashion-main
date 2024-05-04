@@ -211,7 +211,7 @@
         <th scope="row">Name</th>
         <td>Dhoni</td>
          </tr>
-      <tr>
+          <tr>
         <th scope="row">Phone</th>
         <td>John Doe</td>
       </tr>

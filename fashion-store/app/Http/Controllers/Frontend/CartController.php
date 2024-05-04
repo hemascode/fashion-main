@@ -233,19 +233,29 @@ class CartController extends Controller
     /** Calculate coupon discount */
     public function couponCalculation()
     {
+        if (auth()->check()) {
+            $cartItems = \App\Models\Cart::where('user_id', auth()->user()->id)->get();
+            $total = $cartItems->reduce(function ($carry, $item) {
+                return $carry + $item->product->price * $item->qty;
+            }, 0);
+        
+        }
+
         if (Session::has('coupon')) {
             $coupon = Session::get('coupon');
-            $subTotal = getCartTotal();
+            $subTotal = $total;
             if ($coupon['discount_type'] === 'amount') {
                 $total = $subTotal - $coupon['discount'];
+                
                 return response(['status' => 'success', 'cart_total' => $total, 'discount' => $coupon['discount']]);
             } elseif ($coupon['discount_type'] === 'percent') {
                 $discount = $subTotal - ($subTotal * $coupon['discount'] / 100);
                 $total = $subTotal - $discount;
                 return response(['status' => 'success', 'cart_total' => $total, 'discount' => $discount]);
             }
+            
         } else {
-            $total = getCartTotal();
+            $total = $total;
             return response(['status' => 'success', 'cart_total' => $total, 'discount' => 0]);
         }
     }
