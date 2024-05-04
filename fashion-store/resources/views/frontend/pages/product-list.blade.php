@@ -413,51 +413,7 @@ a.sidebar-link:hover {
                 <div class="row">
                   
                     <div class="col-lg-3 col-md-12 col-sm-6 mb-4">
-                      {{-- <div class="wrapper">
-                          <ul class="sidebar-nav">
-                              <li class="sidebar-item">
-                                  <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#categories" aria-expanded="false" aria-controls="categories">
-                                      <span>All Categories</span>
-                                  </a>
-                                  <ul id="categories" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                                      <!-- Insert your category items here -->
-                                      @foreach ($categories as $category)
-                                      <li class="sidebar-item" id="side-{{ $category->slug }}" id="category-a">
-                                          <a href="{{ route('products.index', ['category' => $category->name]) }}" class="sidebar-link" style="color: #fff">{{ $category->name }}</a>
-                                      </li>
-                                      @endforeach
-                                  </ul>
-                              </li>
-                              <li class="sidebar-item">
-                                  <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#price" aria-expanded="false" aria-controls="price">
-                                      <span>Price</span>
-                                  </a>
-                                  <ul id="price" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                                      <li class="sidebar-item ps-3">
-                                          <label for="" class="null" style="color: #ffff !important">0 $</label>
-                                          <input type="range" class="null" id="customRange1" />
-                                          <label for="" class="null" style="color: #ffff !important">800 $ </label><br />
-                                          <button type="button" class="btn btn-primary btn-md mt-1 ms-3">
-                                              <a href="#" style="text-decoration: none; color: #ffff !important">Filter</a>
-                                          </button>
-                                      </li>
-                                  </ul>
-                              </li>
-                              <li class="sidebar-item">
-                                  <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#brands" aria-expanded="false" aria-controls="brands">
-                                      <span>Brands</span>
-                                  </a>
-                                  <ul id="brands" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                                      @foreach ($brands as $brand)
-                                      <li class="sidebar-item">
-                                          <a href="#" class="sidebar-link" style="color: #fff">{{ $brand->name }}</a>
-                                      </li>
-                                      @endforeach
-                                  </ul>
-                              </li>
-                          </ul>
-                      </div> --}}
-
+                    
                       <div class="sidebar_widget">
                         <div class="widget_inner">
                             <div class="widget_list widget_filter sidebar-nav">
@@ -534,11 +490,11 @@ a.sidebar-link:hover {
                                         <a href="#">Dior(7)</a>
                                         <span class="checkmark"></span>
                                     </li>
-                                    <li>
+                                    {{-- <li>
                                         <input type="checkbox">
                                         <a href="#">Hema(6)</a>
                                         <span class="checkmark"></span>
-                                    </li>
+                                    </li> --}}
                                 </ul>
                             </div>
                             <div class="widget_list widget_categories sidebar-nav">

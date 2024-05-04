@@ -81,8 +81,8 @@ Route::put('/cart/update/{itemId}', [CartController::class, 'update'])->name('ca
 
 
 
-Route::get('apply-coupon', [CartController::class, 'applyCoupon'])->name('apply-coupon');
-Route::get('coupon-calculation', [CartController::class, 'couponCalculation'])->name('coupon-calculation');
+// Route::get('apply-coupon', [CartController::class, 'applyCoupon'])->name('apply-coupon');
+// Route::get('coupon-calculation', [CartController::class, 'couponCalculation'])->name('coupon-calculation');
 
 /** Newsletter routes */
 
