@@ -204,9 +204,15 @@
                                 <div class="shopping_coupon_calculate">
                                     <h3 class="border-bottom">Coupon Discount </h3>
                                     <b>Enter your coupon code if you have one.</b>
-                                    <input class="border" placeholder="Enter your code" type="text">
-                                    <button class="btn btn-primary" type="submit">apply coupon</button>
+                                    <form id="coupon_form">
+                                        <input  class="border"    type="text" placeholder="Coupon Code" name="coupon_code" value="{{session()->has('coupon') ? session()->get('coupon')['coupon_code'] : ''}}">
+                                        <button class="btn btn-primary" type="submit">apply coupon</button>
+
+                                    </form>
                                 </div>
+                                
+                               
+                                
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-8">
                                 <div class="grand_totall_area">
@@ -275,4 +281,44 @@
 </html>
 
 @push('scripts')
+<script>
+     $('#coupon_form').on('submit', function(e){
+            e.preventDefault();
+            let formData = $(this).serialize();
+            $.ajax({
+                method: 'GET',
+                url: "{{ route('apply-coupon') }}",
+                data: formData,
+                success: function(data) {
+                   if(data.status === 'error'){
+                    toastr.error(data.message)
+                   }else if (data.status === 'success'){
+                    calculateCouponDescount()
+                    toastr.success(data.message)
+                   }
+                },
+                error: function(data) {
+                    console.log(data);
+                }
+            })
+
+        })
+
+        // calculate discount amount
+        function calculateCouponDescount(){
+            $.ajax({
+                method: 'GET',
+                url: "{{ route('coupon-calculation') }}",
+                success: function(data) {
+                    if(data.status === 'success'){
+                        $('#discount').text('{{$settings->currency_icon}}'+data.discount);
+                        $('#cart_total').text('{{$settings->currency_icon}}'+data.cart_total);
+                    }
+                },
+                error: function(data) {
+                    console.log(data);
+                }
+            })
+        }
+</script>
 @endpush

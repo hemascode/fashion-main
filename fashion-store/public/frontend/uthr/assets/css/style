@@ -2069,7 +2069,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   right: 0;
   transition: ease all 0.4s;
   opacity: 0;
-  transform: translateY(0); }
+  transform: translateY(0); 
+width: 92%;}
   .add_to_cart a.btn-primary {
     margin-top: 0;
     font-size: 14px;
@@ -3328,6 +3329,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
       right: -7px;
       left: auto; }
 
+      
+
 @media only screen and (max-width: 767px) {
   .product-details-tab {
     margin-bottom: 56px; } }
@@ -3836,6 +3839,14 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     @media only screen and (max-width: 767px) {
       .blog_pagination .pagination {
         margin-top: 0; } }
+
+    @media only screen and (min-width: 360px) and (max-width: 600px){
+      .carousel-inner.content_center{
+            justify-content:center !important;
+            align-items:center !important;
+            margin: 0px,auto;
+          }
+        }
 
 /*blog page css end*/
 /*blog fullwidth css here*/

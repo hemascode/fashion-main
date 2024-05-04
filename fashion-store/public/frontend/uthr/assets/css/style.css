@@ -3492,6 +3492,8 @@ textarea:-ms-input-placeholder {
 
 .product-list-items article.single_product {
   margin-bottom: 30px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 0.5rem;
   /* width: 260px; */
 }
 
@@ -3573,7 +3575,7 @@ textarea:-ms-input-placeholder {
 
 .single_product:hover .product_content {
   transform: translateY(-60px);
-  width: 260px;
+  width: 100%;
 }
 
 @media only screen and (max-width: 575px) {
@@ -3620,7 +3622,7 @@ textarea:-ms-input-placeholder {
   background: #ffffff;
   transition: ease all 0.4s;
   position: relative;
-  padding: 18px 0 0;
+  padding: 18px 10px 0;
 }
 
 @media only screen and (max-width: 575px) {
@@ -3651,17 +3653,20 @@ textarea:-ms-input-placeholder {
 .add_to_cart {
   position: absolute;
   top: 100%;
-  left: 0;
-  right: 0;
+  /* left: 0;
+  right: 0; */
+  margin-left: 0px;
+  margin-right: -2px;
   transition: ease all 0.4s;
   opacity: 0;
   transform: translateY(0);
+  width: 92%;
 }
 
 .add_to_cart a.btn-primary {
   margin-top: 0;
   font-size: 14px;
-  padding: 0 28px;
+  padding: 0 10px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -3738,7 +3743,7 @@ textarea:-ms-input-placeholder {
   transition: opacity 0.7s ease, transform 2s cubic-bezier(0, 0, 0.44, 1.18);
   transform: scale(1, 1);
   width: 300px;
-  height: 300px;
+  height: 250px;
   object-fit: cover;
   /* margin-left: 40px; */
 

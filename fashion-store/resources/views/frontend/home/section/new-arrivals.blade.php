@@ -22,7 +22,7 @@
          ]
     }'>
         <div class="col-sm-6 col-md-4 col-lg-3">
-            <article class="single_product">
+            <article class="single_product ">
                 <figure>
                     <div class="product_thumb">
              <a href="/product-list" >            <img class="primary_img" src="https://www.gap.com/webcontent/0019/957/640/cn19957640.jpg" alt="consectetur">
@@ -65,7 +65,7 @@
             <article class="single_product">
                 <figure>
                     <div class="product_thumb">
-            <a href="/product-list" >                                        <img class="primary_img" src="https://i.pinimg.com/originals/7e/09/05/7e0905f16f494b084c4e9ccac4ed521d.jpg" alt="consectetur">
+            <a href="/product-list" >                                        <img class="primary_img" src="{{asset('frontend/uthr/assets/img/categories/1.jpg')}}" alt="consectetur">
                         </a>
                         <div class="product_action">
                             <ul>
@@ -190,7 +190,7 @@
             <article class="single_product">
                 <figure>
                     <div class="product_thumb">
-           <a href="/product-list" >                                        <img class="primary_img" src="https://www.gap.com/webcontent/0020/112/654/cn20112654.jpg" alt="consectetur">
+           <a href="/product-list" >                                  <img class="primary_img" src="https://www.gap.com/webcontent/0020/112/654/cn20112654.jpg" alt="consectetur">
                         </a>
                         <div class="product_action">
                             <ul>

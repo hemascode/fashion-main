@@ -19,9 +19,9 @@ $brands = \App\Models\Brand::all();
     <div class="container">
       
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
+            <div class="carousel-inner content_center">
               @foreach ($brands->chunk(6) as $key => $chunk)
-                <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                <div class="carousel-item {{ $key == 0 ? 'active' : '' }} ">
                   <div class="row">
                     @foreach ($chunk as $brand)
                       <div class=" col-lg-2 ">

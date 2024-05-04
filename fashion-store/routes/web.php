@@ -81,8 +81,8 @@ Route::put('/cart/update/{itemId}', [CartController::class, 'update'])->name('ca
 
 
 
-Route::get('apply-coupon', [CartController::class, 'applyCoupon'])->name('apply-coupon');
-Route::get('coupon-calculation', [CartController::class, 'couponCalculation'])->name('coupon-calculation');
+// Route::get('apply-coupon', [CartController::class, 'applyCoupon'])->name('apply-coupon');
+// Route::get('coupon-calculation', [CartController::class, 'couponCalculation'])->name('coupon-calculation');
 
 /** Newsletter routes */
 
@@ -176,14 +176,16 @@ Route::get('/Season-dashboard', [SeasonDashboardController::class, 'index'])->na
 
 
 
-Route::get('/product-detail', [detailpage::class, 'detailpage'])->name('frontend.pages.product-detail');
+Route::get('/product-detail', [Detailpage::class, 'detailpage'])->name('frontend.pages.product-detail');
 
-Route::get('/product-list', [listpage::class, 'listpage'])->name('frontend.pages.product-list');
+Route::get('/product-list', [Listpage::class, 'listpage'])->name('frontend.pages.product-list');
 
-Route::get('/cart-page', [listpage::class, 'cartpage'])->name('frontend.pages.cart-page');
+Route::get('/cart-page', [Listpage::class, 'cartpage'])->name('frontend.pages.cart-page');
+Route::get('apply-coupon', [ListPage::class, 'applyCoupon'])->name('apply-coupon');
+Route::get('coupon-calculation', [ListPage::class, 'couponCalculation'])->name('coupon-calculation');
 
 
 
-Route::post('/checkout-page', [checkoutpage::class, 'checkoutpage'])->name('frontend.pages.checkout-pages');
-Route::post('/order-sucess', [checkoutpage::class, 'order'])->name('frontend.pages.order');
+Route::post('/checkout-page', [Checkoutpage::class, 'checkoutpage'])->name('frontend.pages.checkout-pages');
+Route::post('/order-sucess', [Checkoutpage::class, 'order'])->name('frontend.pages.order');
 
