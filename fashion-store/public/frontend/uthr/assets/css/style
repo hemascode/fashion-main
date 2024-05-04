@@ -2069,7 +2069,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   right: 0;
   transition: ease all 0.4s;
   opacity: 0;
-  transform: translateY(0); }
+  transform: translateY(0); 
+width: 92%;}
   .add_to_cart a.btn-primary {
     margin-top: 0;
     font-size: 14px;
